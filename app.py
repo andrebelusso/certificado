@@ -18,14 +18,8 @@ if st.button("Gerar Certificado") and nome:
     fonte_rodape = ImageFont.truetype("arial.ttf", 20)
 
     # Nome centralizado na linha
-    draw.text((750, 300), nome, font=fonte_nome, fill="black")
-
-    # Data e serial no rodapé
-    data = datetime.now().strftime("%d/%m/%Y")
-    serial = str(uuid.uuid4())[:8].upper()
-    draw.text((80, 740), f"Data de emissão: {data}", font=fonte_rodape, fill="black")
-    draw.text((1050, 740), f"ID: {serial}", font=fonte_rodape, fill="black")
-
+    draw.text((650, 400), nome, font=fonte_nome, fill="black")
+   
     buffer = io.BytesIO()
     fundo.save(buffer, format="PNG")
     st.success("✅ Certificado gerado com sucesso!")
