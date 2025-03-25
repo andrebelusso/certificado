@@ -18,7 +18,7 @@ if st.button("Gerar Certificado") and nome:
     fonte_rodape = ImageFont.truetype("arial.ttf", 20)
 
     # Nome centralizado na linha
-    draw.text((700, 500), nome, font=fonte_nome, fill="black")
+    draw.text((777, 700), nome, font=fonte_nome, fill="black")
 
     # Data e serial no rodapé
     data = datetime.now().strftime("%d/%m/%Y")
