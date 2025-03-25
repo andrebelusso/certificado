@@ -18,7 +18,7 @@ if st.button("Gerar Certificado") and nome:
     fonte_rodape = ImageFont.truetype("arial.ttf", 20)
 
     # Nome centralizado na linha
-    draw.text((650, 400), nome, font=fonte_nome, fill="black")
+    draw.text((600, 200), nome, font=fonte_nome, fill="black")
    
     buffer = io.BytesIO()
     fundo.save(buffer, format="PNG")
