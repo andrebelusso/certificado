@@ -19,6 +19,12 @@ if st.button("Gerar Certificado") and nome:
 
     # Nome centralizado na linha
     draw.text((950, 450), nome, font=fonte_nome, fill="black")
+
+    # Data e serial no rodapé
+    data = datetime.now().strftime("%d/%m/%Y")
+    serial = str(uuid.uuid4())[:8].upper()
+    draw.text((950, 700), f"Data de emissão: {data}", font=fonte_rodape, fill="black")
+    draw.text((950, 800), f"ID: {serial}", font=fonte_rodape, fill="black")
    
     buffer = io.BytesIO()
     fundo.save(buffer, format="PNG")
